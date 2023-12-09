@@ -32,16 +32,16 @@ Welcome to evaluate your models and explore methods to enhance the models' EgoPl
 
 ## Usage
 
-### Installation
+### 1. Installation
 Clone the repo and install dependent packages:
 
   ```bash
-  git clone https://github.com/AILab-CVC/EgoPlan.git
+  git clone https://github.com/ChenYi99/EgoPlan.git
   cd EgoPlan
   pip install -r requirements.txt
   ```
 
-### EgoPlan Datasets
+### 2. EgoPlan Datasets
 #### Egocentric Videos
 Download the RGB frames of [Epic-Kitchens-100](https://github.com/epic-kitchens/epic-kitchens-download-scripts). The folder structure of the dataset is shown below:
 ```
@@ -149,7 +149,7 @@ Below is an example of a single data sample in the instruction-tuning dataset:
 }
 ```
 
-### Model Weights
+### 3. Model Weights
 We use [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA) as an example for evaluation and instruction-tuning.
 
 #### Prepare the pretrained model checkpoints
@@ -167,7 +167,7 @@ If the server cannot access the Internet, the following weights should be downlo
 - Q-Former ([blip2_pretrained_flant5xxl.pth](https://link.zhihu.com/?target=https%3A//storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_flant5xxl.pth))<br>
 - Bert ([bert-base-uncased](https://link.zhihu.com/?target=https%3A//huggingface.co/bert-base-uncased))
 
-### Evaluation on EgoPlan-Bench
+### 4. Evaluation on EgoPlan-Bench
 #### Evaluating the Vanilla Video-LLaMA
 
 Config the paths for model weights in [video_llama_eval_only_vl.yaml](src/video_llama/eval_configs/video_llama_eval_only_vl.yaml).<br>
@@ -185,7 +185,7 @@ Then, run the script on 1xV100 (32G) GPU:
 bash scripts/eval_egoplan_video_llama.sh
 ```
 
-### fine-tuning on EgoPlan-IT
+### 5. Fine-tuning on EgoPlan-IT
 For increasing instruction diversity, in addition to EgoPlan-IT, we also include an additional collection of 164K instruction data following [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA):
 
 * 3K image-based instructions from MiniGPT-4 [[link](https://github.com/Vision-CAIR/MiniGPT-4/blob/main/dataset/README_2_STAGE.md)]. 
