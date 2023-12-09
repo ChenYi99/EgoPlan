@@ -1,0 +1,6 @@
+datasets:
+  egoplan_action_recognition:
+    data_type: image
+    build_info:
+      anno_dir: path/EgoPlan_IT.json
+      videos_dir: path/EPIC-KITCHENS/

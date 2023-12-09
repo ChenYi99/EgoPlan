@@ -1,0 +1,175 @@
+model:
+  arch: egoplan_video_llama
+  model_type: pretrain_llama_v2
+  freeze_vit: True
+  freeze_qformer: True
+
+  # Vit
+  vit_model_path: "ckpt/eva_vit_g.pth" # Need to set!!
+
+  # Q-Former
+  num_query_token: 32
+  q_former_model: "ckpt/blip2_pretrained_flant5xxl.pth" # Need to set!!
+  q_former_encoder_model: "ckpt/bert-base-uncased" # Need to set!!
+
+  # LLM
+  llama_model: "ckpt/llama-2-7b-chat-hf" # Need to set!!
+
+  # The ckpt of Video-LLaMA vision branch after stage2 finetuned.
+  ckpt: "ckpt/VL_LLaMA_2_7B_Finetuned.pth" # Need to set!!
+
+  # Lora Config for LLM
+  llm_lora_config:
+    lora_ckpt: null
+    use_lora: True
+    lora_r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    lora_target_modules: [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+    ]
+
+  # only train vision branch
+  equip_audio_branch: False  # whether equips the audio branch
+  frozen_llama_proj: False
+  frozen_video_Qformer: False
+  frozen_audio_Qformer: True
+  
+  fusion_head_layers: 2
+  max_frame_pos: 32
+  fusion_header_type: "seqTransf"
+
+  max_txt_len: 320
+
+  # vicuna and llama_2_chat use different template !!!
+
+  # for llama_2_chat:
+  end_sym: "</s>"
+  prompt_path: "prompts/alignment_image.txt"
+  prompt_template: '[INST] <<SYS>>\n \n<</SYS>>\n\n{} [/INST] '
+
+  # for vicuna:
+#  end_sym: "###"
+#  prompt_path: "prompts/alignment_image.txt"
+#  prompt_template: '###Human: {} ###Assistant: '
+
+
+  
+
+datasets:
+  egoplan_contrastive:
+    data_type: video
+    n_actions: 4
+    answer_type: "egoplan_qa"
+    build_info:
+      anno_dir: path/EgoPlan_IT.json # Need to set!!
+      rgb_frame_dir: path/EPIC-KITCHENS/ # Need to set!!
+    vis_processor:
+      train:
+        name: "egoplan_video_train"
+        n_frms: 8
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+    num_video_query_token: 32
+    tokenizer_name: "ckpt/llama-2-7b-chat-hf"
+    model_type: "llama_v2"
+
+  egoplan_action_recognition:
+    data_type: video
+    n_actions: 4
+    answer_type: "egoplan_action_recognition"
+    build_info:
+      anno_dir: path/EgoPlan_IT.json # Need to set!!
+      rgb_frame_dir: path/EPIC-KITCHENS/ # Need to set!!
+    vis_processor:
+      train:
+        name: "egoplan_video_train"
+        n_frms: 8
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+    num_video_query_token: 32
+    tokenizer_name: "ckpt/llama-2-7b-chat-hf"
+    model_type: "llama_v2"
+
+
+  cc_sbu_align:
+    data_type: images
+    build_info:
+      storage: path/cc_sbu_align/ # Need to set!!
+    vis_processor:
+      train:
+        name: "blip2_image_train"
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+
+  llava_instruct:
+    data_type: images
+    build_info:
+      anno_dir: path/llava_instruct_150k.json # Need to set!!
+      videos_dir: path/train2014/ # Need to set!!
+    vis_processor:
+      train:
+        name: "blip2_image_train"
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+    num_video_query_token: 32
+    tokenizer_name: "ckpt/llama-2-7b-chat-hf" # Need to set!!
+    model_type: "llama_v2"
+
+  webvid_instruct:
+    data_type: video
+    build_info:
+      anno_dir: path/videochat_instruct_11k.json # Need to set!!
+      videos_dir: path/webvid_align/videos/ # Need to set!!
+    vis_processor:
+      train:
+        name: "alpro_video_train"
+        n_frms: 8
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+    num_video_query_token: 32
+    tokenizer_name: "ckpt/llama-2-7b-chat-hf" # Need to set!!
+    model_type: "llama_v2"
+
+run:
+  task: video_text_pretrain
+  # optimizer
+  lr_sched: "linear_warmup_cosine_lr"
+  init_lr: 3e-5
+  min_lr: 1e-5
+  warmup_lr: 1e-6
+
+  weight_decay: 0.05
+  max_epoch: 10
+  iters_per_epoch: 3000
+  batch_size_train: 2
+  batch_size_eval: 4
+  num_workers: 4
+  warmup_steps: 1000
+
+  seed: 42
+  output_dir: "outputs/stage3_finetuned_on_EgoPlan_IT"
+
+  amp: True
+  resume_ckpt_path: null
+
+  evaluate: False 
+  train_splits: ["train"]
+
+  device: "cuda"
+  world_size: 1
+  dist_url: "env://"
+  distributed: True

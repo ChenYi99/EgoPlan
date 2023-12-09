@@ -1,0 +1,51 @@
+model:
+  arch: egoplan_video_llama
+  model_type: pretrain_llama_v2
+  freeze_vit: True
+  freeze_qformer: True
+  max_txt_len: 512
+  end_sym: "</s>"
+  low_resource: False
+
+  frozen_llama_proj: False
+
+  # Vit
+  vit_model_path: "ckpt/eva_vit_g.pth" # Need to set!!
+
+  # Q-Former
+  num_query_token: 32
+  q_former_model: "ckpt/blip2_pretrained_flant5xxl.pth" # Need to set!!
+  q_former_encoder_model: "ckpt/bert-base-uncased" # Need to set!!
+
+  # LLM
+  llama_model: "ckpt/llama-2-7b-chat-hf" # Need to set!!
+
+  # The ckpt of Video-LLaMA vision branch after stage3 finetuned on EgoPlan-IT.
+  ckpt: "ckpt/egoplan_video_llama/checkpoint.pth" # Need to set!!
+
+  # The lora parameters of LLM tuned on EgoPlan-IT.
+  llm_lora_config:
+    lora_ckpt: "ckpt/egoplan_video_llama/lora_weights" # Need to set!!
+    use_lora: True
+
+  equip_audio_branch: False
+
+  fusion_head_layers: 2
+  max_frame_pos: 32
+  fusion_header_type: "seqTransf"
+
+
+datasets:
+  webvid:
+    vis_processor:
+      eval:
+        name: "egoplan_video_eval"
+        n_frms: 8
+        n_actions: 4
+        image_size: 224
+    text_processor:
+      train:
+        name: "blip_caption"
+
+run:
+  task: video_text_pretrain
