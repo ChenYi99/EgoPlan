@@ -1,6 +1,6 @@
 # EgoPlan-Bench: Benchmarking Egocentric Embodied Planning with Multimodal Large Language Models
 
-<a ><img src='https://img.shields.io/badge/Project-Page-Green'></a>
+<a href='https://chenyi99.github.io/ego_plan/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
 <a ><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> 
 <a href='https://drive.google.com/drive/folders/1OUnQzG79kxhJdaquBKLv1rrKz36TTkP6?usp=sharing'><img src='https://img.shields.io/badge/Dataset-EgoPlan-blue'></a> 
 <a href='https://huggingface.co/ChenYi99/EgoPlan-Video-LLaMA-2-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 

@@ -2,3 +2,4 @@
 data/*
 model_checkpoints
 **/local*
+.idea
