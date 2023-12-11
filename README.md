@@ -63,7 +63,7 @@ Ego4D
 
 #### EgoPlan-Bench
 Download our evaluation dataset [EgoPlan-Bench](https://drive.google.com/drive/folders/1hn5vgfz0fMNlSm6p7C-LpuoMdZrOffLB?usp=sharing). 
-There are two evaluation subsets, [EgoPlan_Bench_EpicKitchens.json](https://drive.google.com/file/d/1YYJeZVhwqV2QRIh_8w_qnksEL7arYEZu/view?usp=sharing) and [EgoPlan_Bench_Ego4D.json](https://drive.google.com/file/d/1NJlcqi4Xd1GEVXnm--_73YRyVRCexZ-X/view?usp=sharing). 
+There are two evaluation subsets, [EgoPlan_Bench_EpicKitchens.json](https://drive.google.com/file/d/1bt81HlhCzyJeEf_bsRPE2lgv2u9Y7el5/view?usp=sharing) and [EgoPlan_Bench_Ego4D.json](https://drive.google.com/file/d/1E8yJ8oBF6hLBEWeBkJwOCxPygkEeJ-Xt/view?usp=sharing). 
 Put these two JSON files under the directory [data/](data).
 Below is an example of a single data sample in the evaluation dataset:
 ```
@@ -111,7 +111,7 @@ Below is an example of a single data sample in the evaluation dataset:
 
 #### EgoPlan-IT
 Download our instruction-tuning dataset [EgoPlan-IT](https://drive.google.com/drive/folders/1y-zkGcIofRfZyOaznbflWmb9qrKv09ws?usp=sharing).
-Put the JSON file [EgoPlan-IT.json](https://drive.google.com/file/d/1dhV4xIkoWCfXnBOh_ez4b0inDeN_PDBH/view?usp=sharing) under the directory [data/](data).
+Put the JSON file [EgoPlan-IT.json](https://drive.google.com/file/d/1kuANbY6kw-5zq9AISPijDxG4rb76ovsS/view?usp=sharing) under the directory [data/](data).
 Below is an example of a single data sample in the instruction-tuning dataset:
 ```
 {
@@ -184,6 +184,12 @@ Then, run the script on 1xV100 (32G) GPU:
 ```bash
 bash scripts/eval_egoplan_video_llama.sh
 ```
+
+#### Tips for Evaluation Settings
+For models unable to process multiple video clips, please refer to the example code for [evaluating the vanilla Video-LLaMA](#evaluating-the-vanilla-video-llama).
+
+For models capable of processing multiple video clips, please refer to the example code for [evaluating the Video-LLaMA tuned on EgoPlan-IT](#evaluating-the-video-llama-tuned-on-egoplan-it). 
+In our research paper, we have also used this setting for the vanilla Video-LLaMA to ensure a more consistent evaluation of our instruction-tuning approach.
 
 ### 5. Fine-tuning on EgoPlan-IT
 For increasing instruction diversity, in addition to EgoPlan-IT, we also include an additional collection of 164K instruction data following [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA):
