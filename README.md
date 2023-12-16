@@ -207,6 +207,17 @@ Then, run the script on 8xV100 (32G) GPUs:
 bash scripts/finetune_egoplan_video_llama.sh
 ```
 
+## Citation
+If you find our project helpful, hope you can star our repo and cite our paper as follows:
+```
+@article{chen2023egoplan,
+  title={EgoPlan-Bench: Benchmarking Egocentric Embodied Planning with Multimodal Large Language Models},
+  author={Chen, Yi and Ge, Yuying and Ge, Yixiao and Ding, Mingyu and Li, Bohao and Wang, Rui and Xu, Ruifeng and Shan, Ying and Liu, Xihui},
+  journal={arXiv preprint arXiv:2312.06722},
+  year={2023}
+}
+```
+
 ## Acknowledgement
 This repo benefits from [Epic-Kitchens](https://epic-kitchens.github.io/2023), [Ego4D](https://ego4d-data.org/), 
 [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA), 
