@@ -155,7 +155,7 @@ We use [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA) as an example f
 #### Prepare the pretrained model checkpoints
 - The checkpoint of the vanilla Video-LLaMA can be downloaded from
 [Video-LLaMA-2-7B-Finetuned](https://huggingface.co/DAMO-NLP-SG/Video-LLaMA-2-7B-Finetuned).
-- The checkpoint of the Video-LLaMA that has been further tuned on our EgoPlan-IT can be downloaded from
+- Alternatively, the checkpoint of the Video-LLaMA that has been further tuned on our EgoPlan-IT can be downloaded from
 [EgoPlan-Video-LLaMA-2-7B](https://huggingface.co/ChenYi99/EgoPlan-Video-LLaMA-2-7B).
 
 #### Prepare the pretrained LLM weights
