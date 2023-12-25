@@ -2,8 +2,6 @@
 Adapted from: https://github.com/Vision-CAIR/MiniGPT-4/blob/main/demo.py
 """
 import sys
-sys.path.append("/apdcephfs_cq3/share_1290939/milkcychen/epic-kitchens/evaluation_for_egoplan_qa_benchmark/models_video")
-
 
 import argparse
 import os
