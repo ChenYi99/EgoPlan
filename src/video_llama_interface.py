@@ -53,6 +53,7 @@ def ego4d_video_process(sample, vis_processor, n_frms=8):
             video.set(cv2.CAP_PROP_POS_FRAMES, i)
             ret, frame = video.read()
             if ret:
+                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 frame = Image.fromarray(frame).convert("RGB")
                 clip.append(frame)
         clip = clip[:n_frms-1]
