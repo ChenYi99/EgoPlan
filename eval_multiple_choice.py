@@ -78,6 +78,8 @@ if __name__ == '__main__':
                 question_num += 1
 
             fo.write("{} accuracy of {} questions: {:.4f}\n".format(subset_name, question_num, correct_num / question_num))
+            fo.flush()
             total_correct_num += correct_num
             total_question_num += question_num
         fo.write("Overall accuracy of {} questions: {:.4f}\n".format(total_question_num, total_correct_num / total_question_num))
+        fo.flush()
