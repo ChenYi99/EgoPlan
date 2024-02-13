@@ -50,12 +50,12 @@ def load_video(sample, n_frms=MAX_INT, n_actions=N_ACTIONS, sampling="uniform"):
         try:
             assert vlen >= n_frms
         except Exception as e:
-            print(f"Failed to extract key frames: vlen(={vlen}) < n_frms !!!\n"
-                  f"sample_id: {sample['sample_id']}, video_id: {sample['video_id']}\n"
-                  f"start_frame_idx: {start_frame_idx}, stop_frame_idx: {stop_frame_idx}\n"
-                  f"current_observation_frame_idx: {current_observation_frame_idx}\n"
-                  f"action_metadata: {action_metadata}\n"
-                  f"most_recent_actions_metadata: {most_recent_actions_metadata}")
+            # print(f"Failed to extract key frames: vlen(={vlen}) < n_frms !!!\n"
+            #       f"sample_id: {sample['sample_id']}, video_id: {sample['video_id']}\n"
+            #       f"start_frame_idx: {start_frame_idx}, stop_frame_idx: {stop_frame_idx}\n"
+            #       f"current_observation_frame_idx: {current_observation_frame_idx}\n"
+            #       f"action_metadata: {action_metadata}\n"
+            #       f"most_recent_actions_metadata: {most_recent_actions_metadata}")
             raise e
 
         start, end = 0, vlen
