@@ -60,6 +60,7 @@ def ego4d_video_image_process(sample, vis_processor, n_frms=8, n_actions=4):
     current_observation_frame_idx = sample["current_observation_frame"]
     video.set(cv2.CAP_PROP_POS_FRAMES, current_observation_frame_idx)
     ret, image = video.read()
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = Image.fromarray(image).convert("RGB")
 
     video.release()
@@ -152,8 +153,7 @@ def predict_choice(model, vis_processor, model_type, sample, return_loss=True, s
 
 
 
-def build():
-    config_path = "src/video_llama/eval_configs/egoplan_video_llama_eval_only_vl.yaml"
+def build(config_path = "src/video_llama/eval_configs/egoplan_video_llama_eval_only_vl.yaml"):
     args = Arguments(cfg_path=config_path,
                      model_type="llama_v2")
     cfg = Config(args)
