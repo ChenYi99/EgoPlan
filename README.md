@@ -13,22 +13,21 @@
 </p>
 </div>
 
-Multimodal Large Language Models (MLLMs), building upon the powerful Large Language Models (LLMs)
-with exceptional reasoning and generalization capability,
-have opened up new avenues for embodied task planning.
-MLLMs excel in their ability to integrate diverse environmental inputs, such as real-time task progress, visual observations, and open-form language instructions, which are
-crucial for executable task planning. 
+Multimodal Large Language Models, combining the remarkable reasoning and generalization capabilities of 
+Large Language Models (LLMs) with the ability to comprehend visual inputs, have opened up new avenues for embodied task planning. 
+Given diverse environmental inputs, including real-time task progress, visual observations, and open-form language instructions, 
+a proficient task planner is expected to predict feasible actions, which is a feat inherently achievable by Multimodal Large Language Models (MLLMs).
 
-In this work, we introduce a benchmark with human annotations, **EgoPlan-Bench**, to quantitatively investigate the potential of MLLMs
-as embodied task planners in real-world scenarios. Our
-benchmark is distinguished by realistic tasks derived from
-real-world videos, a diverse set of actions involving interactions with hundreds of different objects, and complex visual observations from varied environments.
-We further construct an instruction-tuning
-dataset **EgoPlan-IT** from videos of human-object interactions, to facilitate the learning of high-level task planning
-in intricate real-world situations. 
+In this work, we aim to quantitatively investigate the potential of MLLMs as embodied task planners in real-world scenarios by 
+introducing a benchmark with human annotations named **EgoPlan-Bench**. 
+Our benchmark is distinguished by realistic tasks derived from real-world videos, a diverse set of actions involving interactions 
+with hundreds of different objects, and complex visual observations from varied scenes. 
+We further construct an instruction-tuning dataset **EgoPlan-IT** from videos with human-object interactions, 
+to facilitate the learning of high-level task planning in intricate real-world situations. 
 
 This repository describes the usage of our evaluation data EgoPlan-Bench and instruction-tuning data EgoPlan-IT, and provides the corresponding codes for evaluating and fine-tuning MLLMs on our benchmark. 
 Welcome to evaluate your models and explore methods to enhance the models' EgoPlan capabilities on our benchmark!
+
 
 ## Usage
 
@@ -185,11 +184,14 @@ Then, run the script on 1xV100 (32G) GPU:
 bash scripts/eval_egoplan_video_llama.sh
 ```
 
-#### Tips for Evaluation Settings
-For models unable to process multiple video clips, please refer to the example code for [evaluating the vanilla Video-LLaMA](#evaluating-the-vanilla-video-llama).
+[//]: # (#### Tips for Evaluation Settings)
 
-For models capable of processing multiple video clips, please refer to the example code for [evaluating the Video-LLaMA tuned on EgoPlan-IT](#evaluating-the-video-llama-tuned-on-egoplan-it). 
-In our research paper, we have also used this setting for the vanilla Video-LLaMA to ensure a more consistent evaluation of our instruction-tuning approach.
+[//]: # (For models unable to process multiple video clips, please refer to the example code for [evaluating the vanilla Video-LLaMA]&#40;#evaluating-the-vanilla-video-llama&#41;.)
+
+[//]: # ()
+[//]: # (For models capable of processing multiple video clips, please refer to the example code for [evaluating the Video-LLaMA tuned on EgoPlan-IT]&#40;#evaluating-the-video-llama-tuned-on-egoplan-it&#41;. )
+
+[//]: # (In our research paper, we have also used this setting for the vanilla Video-LLaMA to ensure a more consistent evaluation of our instruction-tuning approach.)
 
 ### 5. Fine-tuning on EgoPlan-IT
 For increasing instruction diversity, in addition to EgoPlan-IT, we also include an additional collection of 164K instruction data following [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA):
