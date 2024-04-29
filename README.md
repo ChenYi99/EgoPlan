@@ -6,7 +6,7 @@
 <a href='https://huggingface.co/ChenYi99/EgoPlan-Video-LLaMA-2-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 
 
 ## Announcements
-- **[2024.5.1]** 📢📢We are holding EgoPlan Challenge in ICML 2024 Workshop! Check out [here](https://github.com/ChenYi99/EgoPlan/tree/challenge)!
+- **[2024.5.1]** 📢📢We are holding the EgoPlan Challenge in ICML 2024 Workshop! Check out [here](https://github.com/ChenYi99/EgoPlan/tree/challenge)!
 
 ## Brief Introduction
 
