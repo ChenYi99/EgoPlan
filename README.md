@@ -6,21 +6,21 @@
 </p>
 </div>
 
-## 📌 Table of Contents
-- [News](#-news)
-- [Introduction](#-introduction)
-- [Challenge Timeline](#-challenge-timeline)
-- [Data](#-data)
-- [Rules](#-rules)
-- [Get Started](#-getting-started)
-- [Citation](#-citation)
+## 📌Table of Contents
+- [News](#news)
+- [Introduction](#introduction)
+- [Challenge Timeline](#challenge-timeline)
+- [Data](#data)
+- [Rules](#rules)
+- [Get Started](#getting-started)
+- [Citation](#citation)
 
-## 📢 News
+## 📢News
 
 - **🚩[2024.5.1]** Training and validation datasets released! The [validation dataset](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) contains of 3,350 multiple-choice questions, which has undergone strict human verification. The [training dataset](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) is automatically constructed and encompasses 50K instruction-following pairs. 
   
 
-## 🚀 Introduction
+## 🚀Introduction
 
 Multimodal Large Language Models (MLLMs) combine the exceptional reasoning and generalization capabilities of Large Language Models with the capacity to understand visual inputs. This integration has opened new possibilities for embodied task planning, which is essential for enabling autonomous agents to plan complex tasks in everyday environments, ultimately leading to the development of versatile AI assistants. The question then arises: ***how far are current MLLMs from becoming embodied planning generalists?***
 
@@ -38,7 +38,7 @@ Set within the context of everyday household activities, the EgoPlan Challenge e
 
 
 
-## 📆 Challenge Timeline
+## 📆Challenge Timeline
 
 <!-- The EgoPlan challenge consists of two phases. 
 In Phase 1, we will release a human-verified validation dataset consisting of 3,350 questions, along with an automatically constructed training dataset encompassing 50K instruction-following pairs. 
@@ -51,7 +51,7 @@ In Phase 2, we will release the test set and open the test server. -->
 - June 1st - Test data release and test server opening
 - July 1st - Test server closing
 
-## 📝 Data
+## 📝Data
 
 ### Egocentric Videos
 The EgoPlan datasets are constructed based on the two existing egocentric video sources: Epic-Kitchens-100 and Ego4D.
@@ -128,7 +128,7 @@ Currently we have released the validation set [EgoPlan_validation.json](https://
 }
 ```
 
-### EgoPlan Training Dataset
+### EgoPlan Training Dataset (EgoPlan-IT)
 We provide an automatically constructed instruction-tuning dataset [EgoPlan_IT.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) for fine-tuning the model. Below shows a data sample:
 ```
 {
@@ -167,13 +167,13 @@ We provide an automatically constructed instruction-tuning dataset [EgoPlan_IT.j
 }
 ```
 
-## ❗️ Rules
+## ❗Rules
 
 - During inference, the visual input should only contain the current observation frame and the preceding frames. No future frame is allowed.
 - Using training data in addition to the officially released EgoPlan-IT is allowed.
 - In order to check for compliance, we will ask the participants to provide technical reports to the challenge committee and participants will be asked to provide a public talk about their works after winning the award.
 
-## 💻 Getting Started
+## 💻Getting Started
 
 ### 1. Installation
 Clone the repo and install dependent packages:
@@ -190,7 +190,7 @@ Clone the repo and install dependent packages:
 
 **Prepare EgoPlan datasets:** Download the validation data set [EgoPlan_validation.json](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) and the training dataset [EgoPlan_IT.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link). Put these two JSON files under the directory [data/](data).
 
-For details of the data structure, please refer to [Data](#-data).
+For details of the data structure, please refer to [Data](#data).
 
 
 ### 3. Model Weights
@@ -254,7 +254,7 @@ Then, run the script on 8xV100 (32G) GPUs:
 bash scripts/finetune_egoplan_video_llama.sh
 ```
 
-## 📚 Citation
+## 📚Citation
 Please consider citing our work if the challenge helps your research with the following BibTex:
 ```
 @article{chen2023egoplan,
