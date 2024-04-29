@@ -1,4 +1,6 @@
-# <center> ICML 2024 EgoPlan Challenge </center>
+<div align="center">
+<h1>ICML 2024 EgoPlan Challenge</h1>
+</div>
 
 <div align="center">
 <p align="center">
