@@ -1,4 +1,4 @@
-<h1 style="text-align:center">ICML 2024 EgoPlan Challenge</h1>
+# <center> ICML 2024 EgoPlan Challenge </center>
 
 <div align="center">
 <p align="center">
@@ -7,13 +7,13 @@
 </div>
 
 ## 📌 Table of Contents
-- [News](#news)
-- [Introduction](#introduction)
-- [Challenge Timeline](#challenge-timeline)
-- [Data](#data)
-- [Rules](#rules)
-- [Get Started](#getting-started)
-- [Citation](#citation)
+- [News](#-news)
+- [Introduction](#-introduction)
+- [Challenge Timeline](#-challenge-timeline)
+- [Data](#-data)
+- [Rules](#-rules)
+- [Get Started](#-getting-started)
+- [Citation](#-citation)
 
 ## 📢 News
 
@@ -129,7 +129,7 @@ Currently we have released the validation set [EgoPlan_validation.json](https://
 ```
 
 ### EgoPlan Training Dataset
-We provide an automatically constructed instruction-tuning dataset [EgoPlan_training.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) for fine-tuning the model. Below shows a data sample:
+We provide an automatically constructed instruction-tuning dataset [EgoPlan_IT.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) for fine-tuning the model. Below shows a data sample:
 ```
 {
     "sample_id": 39,
@@ -188,9 +188,9 @@ Clone the repo and install dependent packages:
 
 **Prepare gocentric videos:** Download the RGB frames of [Epic-Kitchens-100](https://github.com/epic-kitchens/epic-kitchens-download-scripts) and the videos of [Ego4D](https://ego4d-data.org/#download). 
 
-**Prepare EgoPlan datasets:** Download the validation data set [EgoPlan_validation.json](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) and the training dataset [EgoPlan_training.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link). Put these two JSON files under the directory [data/](data).
+**Prepare EgoPlan datasets:** Download the validation data set [EgoPlan_validation.json](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) and the training dataset [EgoPlan_IT.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link). Put these two JSON files under the directory [data/](data).
 
-For details of the data structure, please refer to [Data](#data).
+For details of the data structure, please refer to [Data](#-data).
 
 
 ### 3. Model Weights

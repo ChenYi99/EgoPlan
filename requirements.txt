@@ -32,7 +32,7 @@ cycler==0.10.0
 cymem==2.0.8
 decorator==5.1.1
 decord==0.6.0
-deepspeed @ file:///tmp/deepspeed-0.5.8%2BA100-cp38-cp38-linux_x86_64.whl
+deepspeed
 distlib==0.3.7
 docopt==0.6.2
 einops==0.7.0
