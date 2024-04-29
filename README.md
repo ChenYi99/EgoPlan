@@ -1,50 +1,61 @@
-# EgoPlan-Bench: Benchmarking Egocentric Embodied Planning with Multimodal Large Language Models
-
-<a href='https://chenyi99.github.io/ego_plan/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
-<a href='https://arxiv.org/abs/2312.06722'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> 
-<a href='https://drive.google.com/drive/folders/1OUnQzG79kxhJdaquBKLv1rrKz36TTkP6?usp=sharing'><img src='https://img.shields.io/badge/Dataset-EgoPlan-blue'></a> 
-<a href='https://huggingface.co/ChenYi99/EgoPlan-Video-LLaMA-2-7B'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 
-
-## Announcements
-- **[2024.5.1]** 📢📢We are holding EgoPlan Challenge in ICML 2024 Workshop! Check out the [details](CHALLENGE.md)!
-
-## Brief Introduction
+<h1 style="text-align:center">ICML 2024 EgoPlan Challenge</h1>
 
 <div align="center">
 <p align="center">
-  <img src="./figures/intro.png" width="100%" height="100%" />
+  <img src="./figures/challenge_overview.png" width="100%" height="100%" />
 </p>
 </div>
 
-Multimodal Large Language Models, combining the remarkable reasoning and generalization capabilities of 
-Large Language Models (LLMs) with the ability to comprehend visual inputs, have opened up new avenues for embodied task planning. 
-Given diverse environmental inputs, including real-time task progress, visual observations, and open-form language instructions, 
-a proficient task planner is expected to predict feasible actions, which is a feat inherently achievable by Multimodal Large Language Models (MLLMs).
+## 📌 Table of Contents
+- [News](#news)
+- [Introduction](#introduction)
+- [Challenge Timeline](#challenge-timeline)
+- [Data](#data)
+- [Rules](#rules)
+- [Get Started](#getting-started)
+- [Citation](#citation)
 
-In this work, we aim to quantitatively investigate the potential of MLLMs as embodied task planners in real-world scenarios by 
-introducing a benchmark with human annotations named **EgoPlan-Bench**. 
-Our benchmark is distinguished by realistic tasks derived from real-world videos, a diverse set of actions involving interactions 
-with hundreds of different objects, and complex visual observations from varied scenes. 
-We further construct an instruction-tuning dataset **EgoPlan-IT** from videos with human-object interactions, 
-to facilitate the learning of high-level task planning in intricate real-world situations. 
+## 📢 News
 
-This repository describes the usage of our evaluation data EgoPlan-Bench and instruction-tuning data EgoPlan-IT, and provides the corresponding codes for evaluating and fine-tuning MLLMs on our benchmark. 
-Welcome to evaluate your models and explore methods to enhance the models' EgoPlan capabilities on our benchmark!
+- **🚩[2024.5.1]** Training and validation datasets released! The [validation dataset](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) contains of 3,350 multiple-choice questions, which has undergone strict human verification. The [training dataset](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) is automatically constructed and encompasses 50K instruction-following pairs. 
+  
+
+## 🚀 Introduction
+
+Multimodal Large Language Models (MLLMs) combine the exceptional reasoning and generalization capabilities of Large Language Models with the capacity to understand visual inputs. This integration has opened new possibilities for embodied task planning, which is essential for enabling autonomous agents to plan complex tasks in everyday environments, ultimately leading to the development of versatile AI assistants. The question then arises: ***how far are current MLLMs from becoming embodied planning generalists?***
+
+The EgoPlan Challenge seeks to evaluate the planning capabilities of MLLMs in real-world scenarios by providing diverse environmental inputs. Participants must utilize MLLMs to predict the next feasible action based on real-time task progress videos, current visual observations, and open-form language instructions. The challenge is structured as multiple-choice questions, with accuracy serving as the metric for objective evaluation.
+
+Focusing on everyday household activities, the EgoPlan Challenge includes realistic tasks, a wide range of actions, and complex real-world visual observations. This challenge presents a golden opportunity to explore and innovate using instruction-tuning, prompt-engineering, and other MLLM-related strategies to create effective embodied task planners. We welcome you to the EgoPlan Challenge!
+
+<!-- Multimodal Large Language Models (MLLMs), combining the remarkable reasoning and generalization capabilities of Large Language Models with the ability to comprehend visual inputs, have opened up new avenues for embodied task planning. This is crucial for enabling autonomous agents to plan complex tasks in everyday environments, paving the way for
+versatile AI assistants.
+So we ask **how far are the current MLLMs from becoming an embodied planning generalist?**
+
+The EgoPlan Challenge aims to assess the planning capabilities of MLLMs given diverse environmental inputs in real-world scenarios. Participants are required to use MLLMs to predict the next feasible action based on real-time task progress videos, current visual observations, and open-form language instructions. The questions are designed as multiple-choice problems and accuracy is adopted as the metric to ensure objective evaluation.
+
+Set within the context of everyday household activities, the EgoPlan Challenge encompasses realistic tasks, diverse actions, and complex real-world visual observations. This is a golden opportunity to explore and innovate with instruction-tuning, prompt-engineering and any other MLLM related strategies for building effective embodied task planners. Welcome to the EgoPlan Challenge! -->
 
 
-## Usage
 
-### 1. Installation
-Clone the repo and install dependent packages:
+## 📆 Challenge Timeline
 
-  ```bash
-  git clone https://github.com/ChenYi99/EgoPlan.git
-  cd EgoPlan
-  pip install -r requirements.txt
-  ```
+<!-- The EgoPlan challenge consists of two phases. 
+In Phase 1, we will release a human-verified validation dataset consisting of 3,350 questions, along with an automatically constructed training dataset encompassing 50K instruction-following pairs. 
+In Phase 2, we will release the test set and open the test server. -->
 
-### 2. EgoPlan Datasets
-#### Egocentric Videos
+
+<!-- ### Important Dates -->
+
+- May 1st - Training and validation data release
+- June 1st - Test data release and test server opening
+- July 1st - Test server closing
+
+## 📝 Data
+
+### Egocentric Videos
+The EgoPlan datasets are constructed based on the two existing egocentric video sources: Epic-Kitchens-100 and Ego4D.
+
 Download the RGB frames of [Epic-Kitchens-100](https://github.com/epic-kitchens/epic-kitchens-download-scripts). The folder structure of the dataset is shown below:
 ```
 EPIC-KITCHENS
@@ -62,15 +73,21 @@ Ego4D
     ├── 000786a7-3f9d-4fe6-bfb3-045b368f7d44.mp4
     └── ...
 ```
+ 
+### EgoPlan Validation and Test Datasets
+The multiple-choice questions in validation and test sets are presented as follows: 
 
-#### EgoPlan-Bench
-Download our evaluation dataset [EgoPlan-Bench](https://drive.google.com/drive/folders/1hn5vgfz0fMNlSm6p7C-LpuoMdZrOffLB?usp=sharing). 
-There are two evaluation subsets, [EgoPlan_Bench_EpicKitchens.json](https://drive.google.com/file/d/1bt81HlhCzyJeEf_bsRPE2lgv2u9Y7el5/view?usp=sharing) and [EgoPlan_Bench_Ego4D.json](https://drive.google.com/file/d/1E8yJ8oBF6hLBEWeBkJwOCxPygkEeJ-Xt/view?usp=sharing). 
-Put these two JSON files under the directory [data/](data).
-Below is an example of a single data sample in the evaluation dataset:
+<div align="center">
+<p align="center">
+  <img src="./figures/question_formulation.png" width="100%" height="100%" />
+</p>
+</div>
+
+Currently we have released the validation set [EgoPlan_validation.json](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link). Below shows a data sample:
 ```
 {
     "sample_id": 115,
+    "video_source": "EpicKitchens",
     "video_id": "P01_13",
     "task_goal": "store cereal",
     "question": "Considering the progress shown in the video and my current observation in the last frame, what action should I take next in order to store cereal?",
@@ -111,13 +128,12 @@ Below is an example of a single data sample in the evaluation dataset:
 }
 ```
 
-#### EgoPlan-IT
-Download our instruction-tuning dataset [EgoPlan-IT](https://drive.google.com/drive/folders/1y-zkGcIofRfZyOaznbflWmb9qrKv09ws?usp=sharing).
-Put the JSON file [EgoPlan-IT.json](https://drive.google.com/file/d/1kuANbY6kw-5zq9AISPijDxG4rb76ovsS/view?usp=sharing) under the directory [data/](data).
-Below is an example of a single data sample in the instruction-tuning dataset:
+### EgoPlan Training Dataset
+We provide an automatically constructed instruction-tuning dataset [EgoPlan_training.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) for fine-tuning the model. Below shows a data sample:
 ```
 {
     "sample_id": 39,
+    "video_source": "EpicKitchens",
     "video_id": "P07_113",
     "task_goal": "Cut and peel the onion",
     "question": "Considering the progress shown in the video and my current observation in the last frame, what action should I take next in order to cut and peel the onion?",
@@ -151,6 +167,32 @@ Below is an example of a single data sample in the instruction-tuning dataset:
 }
 ```
 
+## ❗️ Rules
+
+- During inference, the visual input should only contain the current observation frame and the preceding frames. No future frame is allowed.
+- Using training data in addition to the officially released EgoPlan-IT is allowed.
+- In order to check for compliance, we will ask the participants to provide technical reports to the challenge committee and participants will be asked to provide a public talk about their works after winning the award.
+
+## 💻 Getting Started
+
+### 1. Installation
+Clone the repo and install dependent packages:
+
+  ```bash
+  git clone https://github.com/ChenYi99/EgoPlan.git
+  cd EgoPlan
+  pip install -r requirements.txt
+  ```
+
+### 2. Data Preparation
+
+**Prepare gocentric videos:** Download the RGB frames of [Epic-Kitchens-100](https://github.com/epic-kitchens/epic-kitchens-download-scripts) and the videos of [Ego4D](https://ego4d-data.org/#download). 
+
+**Prepare EgoPlan datasets:** Download the validation data set [EgoPlan_validation.json](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) and the training dataset [EgoPlan_training.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link). Put these two JSON files under the directory [data/](data).
+
+For details of the data structure, please refer to [Data](#data).
+
+
 ### 3. Model Weights
 We use [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA) as an example for evaluation and instruction-tuning.
 
@@ -169,7 +211,7 @@ If the server cannot access the Internet, the following weights should be downlo
 - Q-Former ([blip2_pretrained_flant5xxl.pth](https://link.zhihu.com/?target=https%3A//storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_flant5xxl.pth))<br>
 - Bert ([bert-base-uncased](https://link.zhihu.com/?target=https%3A//huggingface.co/bert-base-uncased))
 
-### 4. Evaluation on EgoPlan-Bench
+### 4. Evaluation
 #### Evaluating the Vanilla Video-LLaMA
 
 Config the paths for model weights in [video_llama_eval_only_vl.yaml](src/video_llama/eval_configs/video_llama_eval_only_vl.yaml).<br>
@@ -196,7 +238,7 @@ bash scripts/eval_egoplan_video_llama.sh
 
 [//]: # (In our research paper, we have also used this setting for the vanilla Video-LLaMA to ensure a more consistent evaluation of our instruction-tuning approach.)
 
-### 5. Fine-tuning on EgoPlan-IT
+### 5. Training
 For increasing instruction diversity, in addition to EgoPlan-IT, we also include an additional collection of 164K instruction data following [Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA):
 
 * 3K image-based instructions from MiniGPT-4 [[link](https://github.com/Vision-CAIR/MiniGPT-4/blob/main/dataset/README_2_STAGE.md)]. 
@@ -212,8 +254,8 @@ Then, run the script on 8xV100 (32G) GPUs:
 bash scripts/finetune_egoplan_video_llama.sh
 ```
 
-## Citation
-If you find our project helpful, hope you can star our repo and cite our paper as follows:
+## 📚 Citation
+Please consider citing our work if the challenge helps your research with the following BibTex:
 ```
 @article{chen2023egoplan,
   title={EgoPlan-Bench: Benchmarking Egocentric Embodied Planning with Multimodal Large Language Models},
@@ -223,10 +265,4 @@ If you find our project helpful, hope you can star our repo and cite our paper a
 }
 ```
 
-## Acknowledgement
-This repo benefits from [Epic-Kitchens](https://epic-kitchens.github.io/2023), [Ego4D](https://ego4d-data.org/), 
-[Video-LLaMA](https://github.com/DAMO-NLP-SG/Video-LLaMA), 
-[LLaMA](https://github.com/facebookresearch/llama),
-[MiniGPT-4](https://github.com/Vision-CAIR/MiniGPT-4), 
-[LLaVA](https://github.com/haotian-liu/LLaVA), 
-[VideoChat](https://github.com/OpenGVLab/Ask-Anything). Thanks for their wonderful works!
+If you have any questions or feedback, please feel free to reach out at [yichennlp@gmail.com](yichennlp@gmail.com).
