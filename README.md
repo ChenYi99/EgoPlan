@@ -14,7 +14,7 @@
 - [Challenge Timeline](#challenge-timeline)
 - [Data](#data)
 - [Rules](#rules)
-- [Get Started](#getting-started)
+- [Getting Started](#getting-started)
 - [Citation](#citation)
 
 ## 📢News
