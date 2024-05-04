@@ -19,7 +19,7 @@
 
 ## 📢News
 
-- **🚩[2024.5.1]** Training and validation datasets released! The [validation dataset](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) contains of 3,355 multiple-choice questions, which has undergone strict human verification. The [training dataset](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) is automatically constructed and encompasses 50K instruction-following pairs. 
+- **🚩[2024.5.1]** Training and validation datasets released! The [validation dataset](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) contains of 3,355 multiple-choice questions with ground-truth answers, which has undergone strict human verification. The [training dataset](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) is automatically constructed and encompasses 50K instruction-following pairs. 
   
 
 ## 🚀Introduction
