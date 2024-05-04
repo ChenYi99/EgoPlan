@@ -42,9 +42,9 @@ Set within the context of everyday household activities, the EgoPlan Challenge e
 
 ## 📆Challenge Timeline
 
-- May 1st - Training and validation data release
-- June 1st - Test data release and test server opening
-- July 1st - Test server closing
+- May 1st - Release of Training and Validation Data
+- June 1st - Release of Test Data and Opening of Test Server. Commencement of Registration.
+- July 1st - Closure of Test Server and Deadline for Registration.
 
 ## 📝Data
 
