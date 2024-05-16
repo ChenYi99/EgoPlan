@@ -20,7 +20,8 @@
 ## 📢News
 
 - **🚩[2024.5.1]** Training and validation datasets released! The [validation dataset](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) contains 3,355 multiple-choice questions with ground-truth answers, which has undergone strict human verification. The [training dataset](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) is automatically constructed and encompasses 50K instruction-following pairs. 
-  
+- **🎉[2024.5.1]** The EgoPlan Challenge begins! To register for our challenge, please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link).
+
 
 ## 🚀Introduction
 
@@ -42,9 +43,10 @@ Set within the context of everyday household activities, the EgoPlan Challenge e
 
 ## 📆Challenge Timeline
 
-- May 1st - Release of Training and Validation Data
-- June 1st - Release of Test Data and Opening of Test Server. Commencement of Registration.
-- July 1st - Closure of Test Server and Deadline for Registration.
+- From now until July 1, 2024: Register for this challenge by filling out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link)
+- May 1, 2024: Training set and validation set available
+- June 1, 2024: Test set available, test server opens
+- July 1, 2024: Test server closes, registration ends
 
 ## 📝Data
 
