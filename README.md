@@ -1,5 +1,5 @@
 <div align="center">
-<h1>ICML 2024 EgoPlan Challenge</h1>
+<h1><a href="https://chenyi99.github.io/ego_plan_challenge/">Challenge@ICML 2024</a></h1>
 </div>
 
 <div align="center">
