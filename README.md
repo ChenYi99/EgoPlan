@@ -1,6 +1,6 @@
 <div align="center">
 <h1><a href="https://chenyi99.github.io/ego_plan_challenge/">EgoPlan Challenge@ICML 2024</a></h1>
-<h3><a href="https://icml-mfm-eai.github.io/challenges/#TRACK1">ICML 2024 WORKSHOP: Multi-modal Foundation Model meets Embodied AI Challenges - EgoPlan Track</a></h3>
+<h3><a href="https://icml-mfm-eai.github.io/challenges/#TRACK1">ICML 2024 WORKSHOP: Multi-modal Foundation Model meets Embodied AI</a></h3>
 </div>
 
 <div align="center">
