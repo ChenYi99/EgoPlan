@@ -165,9 +165,9 @@ Video-LLaMA is based on Llama2 Chat 7B. The corresponding LLM weights can be dow
 
 #### Prepare weights for initializing the Visual Encoder and Q-Former (optional)
 If the server cannot access the Internet, the following weights should be downloaded in advance:<br>
-- VIT ([eva_vit_g.pth](https://link.zhihu.com/?target=https%3A//storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/eva_vit_g.pt))<br>
-- Q-Former ([blip2_pretrained_flant5xxl.pth](https://link.zhihu.com/?target=https%3A//storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_flant5xxl.pth))<br>
-- Bert ([bert-base-uncased](https://link.zhihu.com/?target=https%3A//huggingface.co/bert-base-uncased))
+- VIT ([eva_vit_g.pth](https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/eva_vit_g.pth))<br>
+- Q-Former ([blip2_pretrained_flant5xxl.pth](https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_flant5xxl.pth))<br>
+- Bert ([bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased))
 
 ### 4. Evaluation on EgoPlan-Bench
 #### Evaluating the Vanilla Video-LLaMA
