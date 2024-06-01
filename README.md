@@ -16,10 +16,11 @@
 - [Data](#data)
 - [Rules](#rules)
 - [Getting Started](#getting-started)
+- [Submission Guidelines](#submission-guidelines)
 - [Citation](#citation)
 
 ## 📢News
-
+- **🚩[2024.6.1]** [Test data](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing) has been released, [test server](https://eval.ai/web/challenges/challenge-page/2312/overview) is now open. The test dataset contains 1,584 multiple-choice questions. Please follow the [guidelines](#submission-guidelines) for submission.
 - **🚩[2024.5.1]** Training and validation datasets released! The [validation dataset](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) contains 3,355 multiple-choice questions with ground-truth answers, which has undergone strict human verification. The [training dataset](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) is automatically constructed and encompasses 50K instruction-following pairs. 
 - **🎉[2024.5.1]** The EgoPlan Challenge begins! To register for our challenge, please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link).
 
@@ -81,7 +82,7 @@ The multiple-choice questions in validation and test sets are presented as follo
 </p>
 </div>
 
-Currently we have released the validation set [EgoPlan_validation.json](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link). Below shows a data sample:
+Currently we have released both the validation set [EgoPlan_validation.json](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) and the test set [EgoPlan_test.json](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing). Below shows a data sample:
 ```
 {
     "sample_id": 115,
@@ -207,9 +208,9 @@ Video-LLaMA is based on Llama2 Chat 7B. The corresponding LLM weights can be dow
 
 #### Prepare weights for initializing the Visual Encoder and Q-Former (optional)
 If the server cannot access the Internet, the following weights should be downloaded in advance:<br>
-- VIT ([eva_vit_g.pth](https://link.zhihu.com/?target=https%3A//storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/eva_vit_g.pt))<br>
-- Q-Former ([blip2_pretrained_flant5xxl.pth](https://link.zhihu.com/?target=https%3A//storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_flant5xxl.pth))<br>
-- Bert ([bert-base-uncased](https://link.zhihu.com/?target=https%3A//huggingface.co/bert-base-uncased))
+- VIT ([eva_vit_g.pth](https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/eva_vit_g.pth))<br>
+- Q-Former ([blip2_pretrained_flant5xxl.pth](https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_flant5xxl.pth))<br>
+- Bert ([bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased))
 
 ### 4. Evaluation
 #### Evaluating the Vanilla Video-LLaMA
@@ -253,6 +254,29 @@ Then, run the script on 8xV100 (32G) GPUs:
 ```bash
 bash scripts/finetune_egoplan_video_llama.sh
 ```
+
+## 🖊️Submission Guidelines
+Participants can access the Test data by clicking on the following link: [Test Data](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing). This dataset contains a total of 1,584 multiple-choice questions.
+
+The predicted results for the test split should be submitted to the test server hosted by [EvalAI](https://eval.ai/web/challenges/challenge-page/2312/overview).
+We ONLY accept ".json" files. The submitted data format should be like:
+
+    [
+        {  
+            "sample_id": "int",  
+            "label": "str"
+        },
+        ...
+    ]
+
+where the "sample_id" field should be an integer and the "label" field should be a string within ["A","B","C","D"].
+An example submission file can be found [here](example_submission/submission.json).
+
+**Select Test Phase to submit your file. DO NOT Submit your file to Dev Phase. 
+We ONLY consider the team ranks on the Test-Phase leaderboard.**
+
+**The team name you registered on the test server should be the same as the one you filled out on our [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link).**
+
 
 ## 📚Citation
 Please consider citing our work if the challenge helps your research with the following BibTex:
