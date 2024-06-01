@@ -255,7 +255,7 @@ Then, run the script on 8xV100 (32G) GPUs:
 bash scripts/finetune_egoplan_video_llama.sh
 ```
 
-## 🖊️Submission Guidelines
+## ✏️Submission Guidelines
 Participants can access the Test data by clicking on the following link: [Test Data](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing). This dataset contains a total of 1,584 multiple-choice questions.
 
 The predicted results for the test split should be submitted to the test server hosted by [EvalAI](https://eval.ai/web/challenges/challenge-page/2312/overview).
