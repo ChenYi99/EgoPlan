@@ -16,11 +16,11 @@
 - [Data](#data)
 - [Rules](#rules)
 - [Getting Started](#getting-started)
-- [Submission Guidelines](#submission-guidelines)
+- [Submission Guidelines](%EF%B8%8Fsubmission-guidelines)
 - [Citation](#citation)
 
 ## 📢News
-- **🚩[2024.6.1]** [Test data](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing) has been released, [test server](https://eval.ai/web/challenges/challenge-page/2312/overview) is now open. The test dataset contains 1,584 multiple-choice questions. Please follow the [guidelines](#submission-guidelines) for submission.
+- **🚩[2024.6.1]** [Test data](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing) has been released, [test server](https://eval.ai/web/challenges/challenge-page/2312/overview) is now open. The test dataset contains 1,584 multiple-choice questions. Please follow the [guidelines](%EF%B8%8Fsubmission-guidelines) for submission.
 - **🚩[2024.5.1]** Training and validation datasets released! The [validation dataset](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) contains 3,355 multiple-choice questions with ground-truth answers, which has undergone strict human verification. The [training dataset](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) is automatically constructed and encompasses 50K instruction-following pairs. 
 - **🎉[2024.5.1]** The EgoPlan Challenge begins! To register for our challenge, please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link).
 
@@ -255,7 +255,7 @@ Then, run the script on 8xV100 (32G) GPUs:
 bash scripts/finetune_egoplan_video_llama.sh
 ```
 
-## Submission Guidelines
+## 🖊️Submission Guidelines
 Participants can access the Test data by clicking on the following link: [Test Data](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing). This dataset contains a total of 1,584 multiple-choice questions.
 
 The predicted results for the test split should be submitted to the test server hosted by [EvalAI](https://eval.ai/web/challenges/challenge-page/2312/overview).
