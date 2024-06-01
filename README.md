@@ -16,11 +16,11 @@
 - [Data](#data)
 - [Rules](#rules)
 - [Getting Started](#getting-started)
-- [Submission Guidelines](%EF%B8%8Fsubmission-guidelines)
+- [Submission Guidelines](#%EF%B8%8Fsubmission-guidelines)
 - [Citation](#citation)
 
 ## 📢News
-- **🚩[2024.6.1]** [Test data](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing) has been released, [test server](https://eval.ai/web/challenges/challenge-page/2312/overview) is now open. The test dataset contains 1,584 multiple-choice questions. Please follow the [guidelines](%EF%B8%8Fsubmission-guidelines) for submission.
+- **🚩[2024.6.1]** [Test data](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing) has been released, [test server](https://eval.ai/web/challenges/challenge-page/2312/overview) is now open. The test dataset contains 1,584 multiple-choice questions. Please follow the [guidelines](#%EF%B8%8Fsubmission-guidelines) for submission.
 - **🚩[2024.5.1]** Training and validation datasets released! The [validation dataset](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) contains 3,355 multiple-choice questions with ground-truth answers, which has undergone strict human verification. The [training dataset](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) is automatically constructed and encompasses 50K instruction-following pairs. 
 - **🎉[2024.5.1]** The EgoPlan Challenge begins! To register for our challenge, please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link).
 
