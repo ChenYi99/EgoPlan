@@ -169,8 +169,8 @@ We provide an automatically constructed instruction-tuning dataset [EgoPlan_IT.j
 ## ❗Rules
 
 - For participation in the challenge, it is a strict requirement to register for your team by filling out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link).
-- Any kind of Multimodal Large Language Model can be used in this challenge.
-- During inference, the visual input should only contain the current observation frame and the preceding frames. No future frame is allowed.
+- Any kind of Multimodal Large Language Model (MLLM) can be used in this challenge.
+- MLLMs must depend solely on the visual modality within the designated temporal scope to perceive the environment and monitor task progress.  Visual input should be restricted to the current observation frame and its preceding frames. Moreover, incorporating textual narrations of past actions into the input is not permitted.
 - Using training data in addition to the officially released EgoPlan-IT is allowed.
 - In order to check for compliance, we will ask the participants to provide technical reports to the challenge committee and participants will be asked to provide a public talk about their works after winning the award.
 
