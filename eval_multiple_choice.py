@@ -36,20 +36,15 @@ if __name__ == '__main__':
     with open(f"accuracy_for_{args.model}.txt", "w") as fo:
         total_correct_num = 0
         total_question_num = 0
-        for subset_name in ["EpicKitchens", "Ego4D"]:
-            subset_path = os.path.join("data", f"EgoPlan_Bench_{subset_name}.json")
-            with open(subset_path) as fi:
-                samples = json.load(fi)
-
+        with open(os.path.join("data", f"EgoPlan_validation.json")) as fi:
+            samples = json.load(fi)
             correct_num = 0
             question_num = 0
             for i, sample in tqdm(enumerate(samples), desc="Processing questions", total=len(samples)):
-                # if i >= 5:
-                #     break
-
                 print("\n" + "-" * 50 + f" {subset_name}-sample-{sample['sample_id']} " + "-" * 50)
+                video_source = sample["video_source"]
 
-                if subset_name == "EpicKitchens":
+                if video_source == "EpicKitchens":
                     video_id = sample["video_id"]
                     participant_id = video_id.split("_")[0]
                     video_rgb_frame_dir = os.path.join(args.epic_kitchens_rgb_frame_dir,
@@ -77,8 +72,6 @@ if __name__ == '__main__':
                     correct_num += 1
                 question_num += 1
 
-            fo.write("{} accuracy of {} questions: {:.4f}\n".format(subset_name, question_num, correct_num / question_num))
-            fo.flush()
             total_correct_num += correct_num
             total_question_num += question_num
         fo.write("Overall accuracy of {} questions: {:.4f}\n".format(total_question_num, total_correct_num / total_question_num))
