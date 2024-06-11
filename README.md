@@ -261,7 +261,7 @@ An example submission file for the validation set can be found [here](example_su
 Please consider citing our work if the challenge helps your research with the following BibTex:
 ```
 @article{chen2023egoplan,
-  title={EgoPlan-Bench: Benchmarking Egocentric Embodied Planning with Multimodal Large Language Models},
+  title={EgoPlan-Bench: Benchmarking Multimodal Large Language Models for Human-Level Planning},
   author={Chen, Yi and Ge, Yuying and Ge, Yixiao and Ding, Mingyu and Li, Bohao and Wang, Rui and Xu, Ruifeng and Shan, Ying and Liu, Xihui},
   journal={arXiv preprint arXiv:2312.06722},
   year={2023}
