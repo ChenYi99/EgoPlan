@@ -258,7 +258,8 @@ An example submission file for the validation set can be found [here](example_su
 
 
 ## 📚Citation
-Please consider citing our work if the challenge helps your research with the following BibTex:
+If you find our project helpful, hope you can star our repository and cite our paper as follows:
+
 ```
 @article{chen2023egoplan,
   title={EgoPlan-Bench: Benchmarking Multimodal Large Language Models for Human-Level Planning},
