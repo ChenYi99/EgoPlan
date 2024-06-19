@@ -169,7 +169,7 @@ Clone the repo and install dependent packages:
 
 ### 2. Data Preparation
 
-**Prepare gocentric videos:** Download the RGB frames of [Epic-Kitchens-100](https://github.com/epic-kitchens/epic-kitchens-download-scripts) and the videos of [Ego4D](https://ego4d-data.org/#download). 
+**Prepare Egocentric videos:** Download the RGB frames of [Epic-Kitchens-100](https://github.com/epic-kitchens/epic-kitchens-download-scripts) and the videos of [Ego4D](https://ego4d-data.org/#download). 
 
 **Prepare EgoPlan datasets:** Download the validation data set [EgoPlan_validation.json](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) and the training dataset [EgoPlan_IT.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link). Put these two JSON files under the directory [data/](data).
 
