@@ -20,6 +20,7 @@
 - [Citation](#citation)
 
 ## 📢News
+- **🔔[2024.6.28]** We are extending the EgoPlan Challenge deadline for submitting test results on the test server from July 1st to July 10th. Thank you for your participation and good luck!
 - **🚩[2024.6.1]** [Test data](https://drive.google.com/file/d/1G3cH58qlXI11iRFc8R1oFXpHhEiOh4Bd/view?usp=sharing) has been released, [test server](https://eval.ai/web/challenges/challenge-page/2312/overview) is now open. The test dataset contains 1,584 multiple-choice questions. Please follow the [guidelines](#%EF%B8%8Fsubmission-guidelines) for submission.
 - **🚩[2024.5.1]** Training and validation datasets released! The [validation dataset](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) contains 3,355 multiple-choice questions with ground-truth answers, which has undergone strict human verification. The [training dataset](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) is automatically constructed and encompasses 50K instruction-following pairs. 
 - **🎉[2024.5.1]** The EgoPlan Challenge begins! To register for our challenge, please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link).
@@ -45,10 +46,10 @@ Set within the context of everyday household activities, the EgoPlan Challenge e
 
 ## 📆Challenge Timeline
 
-- From now until July 1, 2024: Register for this challenge by filling out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link)
+- From now until July 10, 2024: Register for this challenge by filling out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScnWoXjZcwaagozP3jXnzdSEXX3r2tgXbqO6JWP_lr_fdnpQw/viewform?usp=sf_link)
 - May 1, 2024: Training set and validation set available
 - June 1, 2024: Test set available, test server opens
-- July 1, 2024: Test server closes, registration ends
+- July 10, 2024: Test server closes, registration ends
 
 ## 📝Data
 
@@ -127,7 +128,7 @@ Currently we have released both the validation set [EgoPlan_validation.json](htt
 }
 ```
 
-### EgoPlan Training Dataset (EgoPlan-IT)
+### EgoPlan Training Data (EgoPlan-IT)
 We provide an automatically constructed instruction-tuning dataset [EgoPlan_IT.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link) for fine-tuning the model. Below shows a data sample:
 ```
 {
@@ -187,7 +188,7 @@ Clone the repo and install dependent packages:
 
 ### 2. Data Preparation
 
-**Prepare gocentric videos:** Download the RGB frames of [Epic-Kitchens-100](https://github.com/epic-kitchens/epic-kitchens-download-scripts) and the videos of [Ego4D](https://ego4d-data.org/#download). 
+**Prepare Egocentric videos:** Download the RGB frames of [Epic-Kitchens-100](https://github.com/epic-kitchens/epic-kitchens-download-scripts) and the videos of [Ego4D](https://ego4d-data.org/#download). 
 
 **Prepare EgoPlan datasets:** Download the validation data set [EgoPlan_validation.json](https://drive.google.com/file/d/1Hy-mWrtuDjuq29iCQxCQzk0htTJs8SHg/view?usp=drive_link) and the training dataset [EgoPlan_IT.json](https://drive.google.com/file/d/139UXIgOXbK55tNlK03TBrdSWXdupfrL5/view?usp=drive_link). Put these two JSON files under the directory [data/](data).
 
