@@ -261,11 +261,14 @@ An example submission file for the validation set can be found [here](example_su
 If you find our project helpful, hope you can star our repository and cite our paper as follows:
 
 ```
-@article{chen2023egoplan,
-  title={EgoPlan-Bench: Benchmarking Multimodal Large Language Models for Human-Level Planning},
-  author={Chen, Yi and Ge, Yuying and Ge, Yixiao and Ding, Mingyu and Li, Bohao and Wang, Rui and Xu, Ruifeng and Shan, Ying and Liu, Xihui},
-  journal={arXiv preprint arXiv:2312.06722},
-  year={2023}
+@misc{chen2024egoplanbenchbenchmarkingmultimodallarge,
+  title={EgoPlan-Bench: Benchmarking Multimodal Large Language Models for Human-Level Planning}, 
+  author={Yi Chen and Yuying Ge and Yixiao Ge and Mingyu Ding and Bohao Li and Rui Wang and Ruifeng Xu and Ying Shan and Xihui Liu},
+  year={2024},
+  eprint={2312.06722},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2312.06722}, 
 }
 ```
 
